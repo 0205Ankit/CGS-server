@@ -6,10 +6,8 @@
   "scripts": {
     "start": "node index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "format": "prettier --single-quote --check .",
-    "prepare": "cd ../ && husky install server/.husky",
-    "dev": "nodemon --experimental-modules index.mjs"
+    "dev": "nodemon --experimental-modules index.mjs",
+    "vercel-build": ""
   },
   "author": "",
   "license": "ISC",
