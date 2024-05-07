@@ -8,7 +8,7 @@
     "start": "node index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --experimental-modules index.mjs",
-    "vercel-build": ""
+    "vercel-build": "echo hello"
   },
   "author": "",
   "license": "ISC",
