@@ -1,7 +1,7 @@
 import express from "express";
-import db from "../db/conn.mjs";
+import db from "../db/conn.js";
 import { ObjectId } from "mongodb";
-import { authorize, uploadFile } from "../utils.mjs";
+import { authorize, uploadFile } from "../utils.js";
 import multer from "multer";
 
 const router = express.Router();
