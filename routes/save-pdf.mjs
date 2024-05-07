@@ -19,6 +19,13 @@ router.post("/", uplaod.single("pdf"), async (req, res) => {
       const uploadedFile = await uploadFile(authClient, pdf);
       uploadedFileId = uploadedFile.data.id;
 
+      if (!uploadedFileId) {
+        return res.status(500).send({
+          status: "error",
+          error: "Unable to upload file",
+        });
+      }
+
       const collections = await db.listCollections().toArray();
       const saved_pdfs_collection_exists = collections.some(
         (collection) => collection.name === "saved_pdfs"

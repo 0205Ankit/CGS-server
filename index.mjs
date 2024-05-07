@@ -18,6 +18,10 @@ app.use(express.json());
 // Load the /save-pdf routes
 app.use("/save-pdfs", savePdf);
 
+app.get("/", (req, res) => {
+  res.send("Hello Welcome to the Certificate Generator API!");
+});
+
 // Global error handling
 app.use((err, _req, res, next) => {
   res.status(500).send("Uh oh! An unexpected error occured.");
